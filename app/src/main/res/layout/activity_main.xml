@@ -1,0 +1,417 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#17151F"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pocket PNGTuber"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="YOUR MOBILE VTUBER STUDIO"
+            android:textColor="#B9A5FF"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="24dp"
+            android:background="#292536"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/characterPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:contentDescription="Character preview"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/previewPlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Your character will appear here"
+                android:textColor="#BDB7CC"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/selectedExpressionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Previewing: None"
+            android:textColor="#B9A5FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="CHARACTER IMAGES"
+            android:textColor="#B9A5FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Import four transparent PNG images."
+            android:textColor="#D0CADB"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/importIdleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Import Idle PNG" />
+
+        <Button
+            android:id="@+id/importTalkingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import Talking PNG" />
+
+        <Button
+            android:id="@+id/importBlinkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import Blinking PNG" />
+
+        <Button
+            android:id="@+id/importTalkingBlinkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import Talking + Blinking PNG" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="EXPRESSION PREVIEW"
+            android:textColor="#B9A5FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/previewIdleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Preview Idle" />
+
+        <Button
+            android:id="@+id/previewTalkingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preview Talking" />
+
+        <Button
+            android:id="@+id/previewBlinkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preview Blinking" />
+
+        <Button
+            android:id="@+id/previewTalkingBlinkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preview Talking + Blinking" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="MICROPHONE SETTINGS"
+            android:textColor="#B9A5FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sensitivityValueText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Sensitivity: 60%"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/sensitivitySlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:min="1"
+            android:progress="60"
+            android:progressTint="#B9A5FF"
+            android:thumbTint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Less sensitive"
+                android:textColor="#D0CADB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More sensitive"
+                android:textColor="#D0CADB"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bounceIntensityValueText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Bounce intensity: 18"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/bounceIntensitySlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:max="40"
+            android:progress="18"
+            android:progressTint="#B9A5FF"
+            android:thumbTint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="None"
+                android:textColor="#D0CADB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maximum"
+                android:textColor="#D0CADB"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/microphoneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Enable Microphone" />
+
+        <TextView
+            android:id="@+id/microphoneLevelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Microphone level: --"
+            android:textColor="#D0CADB"
+            android:textSize="13sp" />
+
+        <!-- SCREEN RECORDING -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="SCREEN RECORDING"
+            android:textColor="#B9A5FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Record your screen while your character reacts to your voice."
+            android:textColor="#D0CADB"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/microphoneGainValueText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Microphone recording gain: 40%"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/microphoneGainSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:max="100"
+            android:progress="40"
+            android:progressTint="#B9A5FF"
+            android:thumbTint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/playbackGainValueText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Phone audio recording gain: 40%"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/playbackGainSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:max="100"
+            android:progress="40"
+            android:progressTint="#B9A5FF"
+            android:thumbTint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="These controls affect recorded audio only, not microphone talking detection."
+            android:textColor="#BDB7CC"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/startRecordingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="START RECORDING"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/stopRecordingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STOP RECORDING"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/recordingStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Recording: Not started"
+            android:textColor="#D0CADB"
+            android:textSize="13sp" />
+
+        <!-- COPY AUDIO DIAGNOSTICS -->
+
+        <Button
+            android:id="@+id/copyDiagnosticsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="COPY DIAGNOSTICS"
+            android:enabled="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Copy the latest audio test results to your clipboard."
+            android:textColor="#BDB7CC"
+            android:textSize="12sp" />
+
+        <!-- PRE-MIXER WAV EXPORT -->
+
+        <Button
+            android:id="@+id/exportRawWavButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="EXPORT PRE-MIXER WAV" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Export the original phone audio before mixing."
+            android:textColor="#BDB7CC"
+            android:textSize="12sp" />
+
+        <!-- POST-MIXER WAV EXPORT -->
+
+        <Button
+            android:id="@+id/exportPostMixerWavButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="EXPORT POST-MIXER WAV" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Export the audio after microphone and phone audio are mixed."
+            android:textColor="#BDB7CC"
+            android:textSize="12sp" />
+
+        <!-- FLOATING OVERLAY -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="FLOATING OVERLAY"
+            android:textColor="#B9A5FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/startOverlayButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="START FLOATING OVERLAY" />
+
+    </LinearLayout>
+</ScrollView>

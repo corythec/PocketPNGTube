@@ -1,0 +1,41 @@
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="240dp"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/overlayCharacterImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="Floating character" />
+
+    <TextView
+        android:id="@+id/overlayCloseButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="top|end"
+        android:gravity="center"
+        android:text="×"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:background="#66000000"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/overlayResizeHandle"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="bottom|end"
+        android:gravity="center"
+        android:text="◢"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="#66000000"
+        android:clickable="true"
+        android:focusable="true" />
+
+</FrameLayout>
